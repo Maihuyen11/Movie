@@ -32,3 +32,10 @@ Route::get('/action', [App\Http\Controllers\MovieController::class, 'phimHanhDon
 use App\Http\Controllers\MovieController;
 
 Route::get('/phim_doanh_thu_cao_nhat', [MovieController::class, 'phimDoanhThuCaoNhat']);
+
+Route::get('/the-loai-phim', function () {
+    
+    $genres = DB::table('genre')->get(); 
+    
+    return view('genres', compact('genres')); 
+});
