@@ -37,4 +37,12 @@ class MovieController extends Controller
             
         return view('action', compact('movies'));
     }
+<<<<<<< HEAD
+=======
+    public function showGenres()
+    {
+        $genres = DB::table('genre')->get(); 
+        return view('genres', compact('genres')); 
+    }
+>>>>>>> Thu-Hung
 }
