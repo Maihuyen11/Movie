@@ -20,4 +20,4 @@ Route::get('/truongthicamhong', function () {
 
 
 // Route hiển thị phim hành động
-Route::get('/movies/action', [App\Http\Controllers\MovieController::class, 'ActionMovies']);
+Route::get('/movies/action', [App\Http\Controllers\ActionMovieController::class, 'hanh_dong']);

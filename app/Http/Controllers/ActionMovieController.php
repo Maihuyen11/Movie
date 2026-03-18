@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class MovieController extends Controller
+class ActionMovieController extends Controller
 {
-    public function ActionMovies()
+    public function hanh_dong()
     {
         $movies = DB::table('movie')
             ->join('movie_genre', 'movie.id', '=', 'movie_genre.id_movie')
