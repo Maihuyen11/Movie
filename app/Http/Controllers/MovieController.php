@@ -74,6 +74,6 @@ class MovieController extends Controller
             ->limit(10)
             ->get();
 
-        return view('phim_canada', compact('movies'));
+        return view('canada_movies', compact('movies'));
     }
 }
