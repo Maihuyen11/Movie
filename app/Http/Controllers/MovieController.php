@@ -18,7 +18,7 @@ class MovieController extends Controller
     }
     public function phimDoanhThuCaoNhat()
     {
-    $movies = DB::table('movie') // check lại tên bảng
+    $movies = DB::table('movie') 
         ->select('movie_name', 'release_date', 'budget')
         ->orderBy('budget', 'desc')
         ->limit(10)
