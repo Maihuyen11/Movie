@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB; 
 
 Route::get('/baoyen', function () {
     return 'Bảo Yến'; 
@@ -16,11 +15,4 @@ Route::get('/tranvothuhung', function () {
 
 Route::get('/truongthicamhong', function () {
     return 'Trương Thị Cẩm Hồng';
-});
-
-Route::get('/the-loai-phim', function () {
-    
-    $genres = DB::table('genre')->get(); 
-    
-    return view('genres', compact('genres')); 
 });
