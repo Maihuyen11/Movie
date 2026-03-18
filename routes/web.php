@@ -18,4 +18,11 @@ Route::get('/truongthicamhong', function () {
     return 'Trương Thị Cẩm Hồng';
 });
 
+
+Route::get('/hop/canada-movies', function () {
+    $movies = DB::table('movie')->where('country_name', 'Canada')->get();
+    return view('canada_movies', ['movies' => $movies]);
+});
+
+
 Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
