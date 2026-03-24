@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ $title ?? 'Nhà Sách Phương Nam' }} [cite: 76]</title>
+    <title>{{ $title ?? 'Nhà Sách Phương Nam' }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         .navbar { background-color: #ff5850; font-weight: bold; }
