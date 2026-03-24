@@ -10,6 +10,14 @@
         .navbar-nav { margin: 0 auto; }
         .list-book { display: grid; grid-template-columns: repeat(4, 24%); }
         .book { margin: 10px; text-align: center; }
+        .list-book {
+    display: grid;
+    grid-template-columns: repeat(4, 24%); /* Chia 4 cột [cite: 152] */
+}
+.book {
+    margin: 10px;
+    text-align: center; /* Căn giữa nội dung sách [cite: 156, 157] */
+}
     </style>
 </head>
 <body>
