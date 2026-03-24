@@ -23,16 +23,16 @@
                 <nav class="navbar navbar-light">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ url('sach') }}">Trang chủ [cite: 181]</a>
+                            <a class="nav-link" href="{{ url('sach') }}">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('sach/theloai/1') }}">Tiểu thuyết [cite: 184]</a>
+                            <a class="nav-link" href="{{ url('sach/theloai/1') }}">Tiểu thuyết </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('sach/theloai/2') }}">Truyện ngắn - tản văn [cite: 187]</a>
+                            <a class="nav-link" href="{{ url('sach/theloai/2') }}">Truyện ngắn-tản văn </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('sach/theloai/3') }}">Tác phẩm kinh điển [cite: 190]</a>
+                            <a class="nav-link" href="{{ url('sach/theloai/3') }}">Tác phẩm kinh điển </a>
                         </li>
                     </ul>
                 </nav>
