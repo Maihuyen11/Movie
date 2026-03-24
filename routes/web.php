@@ -44,3 +44,5 @@ Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
 
+Route::get('/sach/chitiet/{id}', [App\Http\Controllers\LayOutController::class, 'chitiet']);
+
