@@ -1,3 +1,4 @@
+
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
@@ -14,4 +15,12 @@ class LayOutController extends Controller {
         $data = DB::select("select * from sach where the_loai = ?", [$id]); 
         return view("sach.index", compact("data")); 
     }
+    public function chitiet($id) {
+    $sach = DB::select("select * from sach where id = ?", [$id]);
+    
+    if (count($sach) > 0) {
+        return view("sach.chitiet", ['sach' => $sach[0]]);
+    }
+    return redirect('/sach');
+}
 }

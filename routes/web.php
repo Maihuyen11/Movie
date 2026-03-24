@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\DB; 
 use App\Http\Controllers\LayOutController;
-=======
 
->>>>>>> Dinh-Cuong
 
 Route::get('/baoyen', function () {
     return 'Bảo Yến'; 
@@ -49,7 +46,6 @@ Route::get('/phim-tren-120-phut', [MovieController::class, 'phimThoiLuongDai']);
 
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
 
-<<<<<<< HEAD
 // 1. Trang mặc định hiển thị 8 cuốn sách rẻ nhất
 Route::get('/sach', [LayOutController::class, 'sach']);
 
