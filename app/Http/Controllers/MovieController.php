@@ -2,44 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class MovieController extends Controller
 {
-    public function runtimeOver120()
+    // Yêu cầu 7.2: Hàm lấy 10 phim điểm cao nhất
+    public function topMovies()
     {
         $movies = DB::table('movie')
-            ->select('movie_name', 'release_date', 'runtime')
-            ->where('runtime', '>', 120)
+            ->orderBy('vote_average', 'desc')
             ->limit(10)
             ->get();
 
-        return view('runtime_over_120', compact('movies'));
-    }
-    public function phimDoanhThuCaoNhat()
-    {
-    $movies = DB::table('movie') 
-        ->select('movie_name', 'release_date', 'budget')
-        ->orderBy('budget', 'desc')
-        ->limit(10)
-        ->get();
-
-    return view('phim_doanh_thu_cao_nhat', compact('movies'));
-    }
-    public function phimHanhDong()
-    {
-        $movies = DB::table('movie')
-            ->join('movie_genre', 'movie.id', '=', 'movie_genre.id_movie')
-            ->join('genre', 'movie_genre.id_genre', '=', 'genre.id')
-            ->where('genre.genre_name', 'Action')
-            ->select('movie.movie_name', 'movie.release_date', 'movie.overview', 'movie.image_link')
-            ->get();
-            
-        return view('action', compact('movies'));
-    }
-    public function showGenres()
-    {
-        $genres = DB::table('genre')->get(); 
-        return view('genres', compact('genres')); 
+        return view('top_movies', compact('movies'));
     }
 }
